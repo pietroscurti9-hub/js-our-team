@@ -70,5 +70,5 @@ for (let i = 0; i < teamMembers.length; i++) {
   `
   }
 
-// prendo il contenuto di output, lo inserisco in "contenitore" che verrà generato nel dom
+// prendo il contenuto di output, lo inserisco dentro "contenitore" che è già presente nel dom
 contenitore.innerHTML = output
