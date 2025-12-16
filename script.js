@@ -43,15 +43,19 @@ const teamMembers = [
 ];
 
 
-// setup
+// seleziono la classe del container in cui andrò ad inserire le card
+const contenitore = document.querySelector('.minicontainer');
 
-const contenitore = document.querySelector('.minico');
+// creo una variabile let vuota che metterò nel dom, in cui inserirò il container 
 let output = "";
 
-
+// creo un ciclo for per scorrere tra gli object
 for (let i = 0; i < teamMembers.length; i++) {
+  // creo una constante che equivale al singolo oggetto contenuto nell'array di oggetti
   const singleMember = teamMembers[i];
-
+//  nell'output aggiungo il blocco delle card che voglio generare,
+// rendo dinamiche le immagini e i dati da inserire nelle card, 
+// cosi ad ogni ciclo di for prenderò dall'array gli oggetti in ordine,
   output += `
   <div class="col-4 mb-3">
 <div class="card" style="width: 18rem;">
@@ -63,8 +67,8 @@ for (let i = 0; i < teamMembers.length; i++) {
           </div>
       </div>
   </div>
-`
+  `
+  }
 
-}
-
+// prendo il contenuto di output, lo inserisco in "contenitore" che verrà generato nel dom
 contenitore.innerHTML = output
