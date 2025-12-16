@@ -3,8 +3,6 @@
 // creare una pagina dedicata in cui mostrare una card per ciascun componente.
 
 
-
-
 const teamMembers = [
   {
     name: "Marco Bianchi",
@@ -43,3 +41,30 @@ const teamMembers = [
     img: "img/female3.png"
   }
 ];
+
+
+// setup
+
+const contenitore = document.querySelector('.minico');
+let output = "";
+
+
+for (let i = 0; i < teamMembers.length; i++) {
+  const singleMember = teamMembers[i];
+
+  output += `
+  <div class="col-4 mb-3">
+<div class="card" style="width: 18rem;">
+      <img src="./${singleMember.img}" class="card-img-top" alt="...">
+      <div class="card-body">
+          <p class="card-text">${singleMember.name}</p>
+          <p class="card-text">${singleMember.role}</p>
+          <p class="card-text">${singleMember.email}</p>
+          </div>
+      </div>
+  </div>
+`
+
+}
+
+contenitore.innerHTML = output
